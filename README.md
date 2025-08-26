@@ -1,6 +1,6 @@
 # Expense Tracker
 
-ระบบบันทึกและสรุปค่าใช้จ่ายส่วนตัว พร้อม filter, sort และ dashboard แสดงผลรวมตามหมวดหมู่
+ระบบบันทึกและสรุปค่าใช้จ่าย พร้อม filter, sort และ dashboard แสดงผลรวมตามหมวดหมู่
 
 ## Tech Stack
 - Frontend: Next.js + Tailwind CSS
