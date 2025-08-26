@@ -1,10 +1,10 @@
 import { createClient } from '@supabase/supabase-js'
 
-// // log ตรวจสอบค่า env (ใช้เฉพาะตอน debug)
-// console.log("SUPABASE_URL:", process.env.NEXT_PUBLIC_SUPABASE_URL)
-// console.log("SUPABASE_KEY:", process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.slice(0,10) + "...")
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-export const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-)
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error("Supabase environment variables are not set")
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)
