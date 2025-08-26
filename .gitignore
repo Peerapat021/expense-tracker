@@ -10,6 +10,16 @@
 !.yarn/releases
 !.yarn/versions
 
+# Environment variables
+.env.local
+
+# Node modules
+node_modules/
+
+# Next.js build
+.next/
+out/
+
 # testing
 /coverage
 
