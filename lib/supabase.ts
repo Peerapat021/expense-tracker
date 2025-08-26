@@ -1,8 +1,10 @@
-// client Supabase (เชื่อม DB)
-
 import { createClient } from '@supabase/supabase-js'
 
-export const supabaseServer = createClient(
-  process.env.SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
+// // log ตรวจสอบค่า env (ใช้เฉพาะตอน debug)
+// console.log("SUPABASE_URL:", process.env.NEXT_PUBLIC_SUPABASE_URL)
+// console.log("SUPABASE_KEY:", process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.slice(0,10) + "...")
+
+export const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
